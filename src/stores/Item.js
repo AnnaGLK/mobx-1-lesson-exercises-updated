@@ -12,4 +12,19 @@ export class Item {
             completed: observable
         })
     }
+
+
+}class Item extends Component {
+    // other methods
+    render() {
+        let item = this.props.item
+         return (
+            <div className = {item.completed ? "crossed": null}>
+            <input type="checkbox"
+                value={item.name}/> 
+                {item.name} 
+            </div>)
+    }
 }
+
+export default observer(Item)

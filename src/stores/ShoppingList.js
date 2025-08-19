@@ -7,7 +7,11 @@ export class ShoppingList {
     constructor() {
         this.list = []
         this.length = 0
-        // your code here
+       
+        makeObservable(this, {
+          list: observable,
+          length: observable
+        })
 
     }
     checkItem = () => {
